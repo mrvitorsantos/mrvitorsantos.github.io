@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos | INPEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .gallery-section {
+            padding: 120px 0 100px;
+            min-height: 100vh;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+        .gallery-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(33, 165, 102, 0.15);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        .img-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+        }
+        .gallery-content {
+            padding: 32px;
+        }
+        .gallery-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+        .gallery-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-back:hover {
+            color: var(--primary);
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .specs-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+        .specs-list li {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .specs-list strong {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;"><span class="logo-text">INPE<span class="logo-accent">X</span></span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="lideres.html">Líderes de Frente</a></li>
+                <li><a href="index.html#edicoes">Edições Anteriores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <a href="index.html#edicoes" class="btn-back"><i class="ph ph-arrow-left"></i> Voltar para a Home</a>
+            
+            <div class="page-header">
+                <div class="badge">Tecnologia</div>
+                <h1>Nossos <span class="text-gradient">Produtos</span></h1>
+                <p class="hero-subtitle">Conheça nossa linha de soluções projetadas para proporcionar a máxima eficiência e performance.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <a href="especificacao.html?id=ultradelay" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/retardos.png" alt="Ultradelay INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Ultradelay</h3>
+                        <p>Sistema não-elétrico de retardo bi-direcional da INPEX, composto por espoletas acopladas em conectores plásticos e ligadas por um tubo.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="especificacao.html?id=explonel" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/brinel.png" alt="Explonel INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Explonel</h3>
+                        <p>Série de detonadores não-elétricos da INPEX para detonações padrões. Uso de retardos de precisão com a menor dispersão do mercado.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="especificacao.html?id=explogel" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/encartuchado.png" alt="Explogel INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Explogel e Explogel Aluminizada</h3>
+                        <p>Emulsão explosiva encartuchada INPEX de alta energia e densidade média. Excelente resistência à água e altíssima segurança de manuseio.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="especificacao.html?id=ultrabooster" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/boosters.png" alt="Ultrabooster INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Ultrabooster</h3>
+                        <p>Explosivo iniciador (reforçador) de alta energia da INPEX para garantir os melhores resultados na detonação. Resiste à água e óleo.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="especificacao.html?id=explocord" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/emulsao_bombeada.png" alt="Explocord INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Explocord</h3>
+                        <p>Cordel detonante convencional e reforçado da INPEX. Submersível e flexível, utilizado para iniciar explosivos ou como linha mestra.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="especificacao.html?id=exploprill" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/anfo.png" alt="Exploprill INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Exploprill</h3>
+                        <p>Explosivo INPEX tipo ANFO de baixa densidade, que acopla-se às paredes do furo gerando máxima pressão e rendimento em rochas duras.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card 7 -->
+                <a href="especificacao.html?id=explopim" class="gallery-card" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="img-wrapper">
+                        <img src="images/brinel.png" alt="Explopim INPEX" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Explopim</h3>
+                        <p>Associação da espoleta simples com o estopim de fábrica pela INPEX. Elimina cortes imperfeitos e otimiza operações de campo.</p>
+                        <span style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;">Ver Especificações <i class="ph ph-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">INPE<span class="logo-accent">X</span></span>
+                </div>
+                <p>Líder em desmonte de rochas e engenharia de detonações no Brasil.</p>
+                <div class="socials">
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Equipamentos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 INPEX. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificações do Produto | INPEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .product-section {
+            padding: 120px 0 100px;
+            min-height: 100vh;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .btn-back:hover {
+            color: var(--primary);
+        }
+        
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 48px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .product-image {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+            max-height: 500px;
+        }
+        
+        .product-info h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+        
+        .product-info p.desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        
+        .specs-table th, .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .specs-table th {
+            color: var(--text-main);
+            font-weight: 600;
+            width: 40%;
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .specs-table td {
+            color: var(--text-muted);
+        }
+        
+        .specs-table tr:last-child th,
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;"><span class="logo-text">INPE<span class="logo-accent">X</span></span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="lideres.html">Líderes de Frente</a></li>
+                <li><a href="index.html#edicoes">Edições Anteriores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="product-section">
+        <div class="container">
+            <a href="produtos.html" class="btn-back"><i class="ph ph-arrow-left"></i> Voltar para Produtos</a>
+            
+            <div class="product-container" id="product-content">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">INPE<span class="logo-accent">X</span></span>
+                </div>
+                <p>Líder em desmonte de rochas e engenharia de detonações no Brasil.</p>
+                <div class="socials">
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Equipamentos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 INPEX. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const productsData = {
+            "ultradelay": {
+                name: "Ultradelay",
+                desc: "Sistema não-elétrico de retardo bi-direcional da INPEX, composto por duas espoletas acopladas em conectores plásticos e ligadas por um tubo. O sistema de conexão é ágil, fácil e seguro, ideal para minerações subterrâneas, a céu aberto, pedreiras e obras civis.",
+                img: "images/retardos.png",
+                specs: {
+                    "Tempos de Retardo": "9, 17, 25, 42, 67 ms",
+                    "Comprimento": "90 cm",
+                    "Unidades por caixa": "75",
+                    "Cor do tubo": "Verde",
+                    "Cores do Conector": "Verde (9ms), Amarelo (17ms), Vermelho (25ms), Branco (42ms), Preto (67ms)",
+                    "Classe ONU": "1.1 B (UN 0360)"
+                }
+            },
+            "explonel": {
+                name: "Explonel",
+                desc: "Série de detonadores não-elétricos da INPEX para detonações padrões com reforçadores. O uso de retardos de precisão minimiza dispersões, otimizando o uso da energia expansiva. A dispersão dos detonadores INPEX é a menor do mercado.",
+                img: "images/brinel.png",
+                specs: {
+                    "Tempos de Retardo (COL)": "250/275 ms a 8300 ms",
+                    "Tempos de Retardo (SC)": "9, 17, 25, 42, 67, 100 ms",
+                    "Comprimentos": "4,8m a 30m",
+                    "Cores do tubo": "Amarelo (COL), Laranja (UG), Verde (SC)",
+                    "Classe ONU": "1.1 B (UN 0360)"
+                }
+            },
+            "explogel": {
+                name: "Explogel e Explogel Aluminizada",
+                desc: "Emulsão explosiva encartuchada da INPEX de alta energia e densidade média. Apresenta resistência à água e é muito segura para manipulação. Desenhada para uso como carga de fundo em detonações de bancadas de rochas de dureza média e alta.",
+                img: "images/encartuchado.png",
+                specs: {
+                    "Densidade": "1,15 a 1,24 g/cm³ (Normal) / 1,10 a 1,20 (Aluminizada)",
+                    "Velocidade de Detonação (VOD)": "5600 m/s (Normal) / 5400 m/s (Aluminizada)",
+                    "Volume de gases": "920 l/kg (Normal) / 880 l/kg (Aluminizada)",
+                    "Pressão dos gases": "62 K/bar (Normal) / 58 K/bar (Aluminizada)",
+                    "Formatos": "1x8'' a 3x24''",
+                    "Classe ONU": "1.1 D (UN 0241)"
+                }
+            },
+            "ultrabooster": {
+                name: "Ultrabooster",
+                desc: "Explosivo iniciador (reforçador) de alta energia da INPEX para garantir os melhores resultados na detonação. Composto por uma mistura de alta potência, extremamente estável e resistente à água e óleo. Atua como iniciador de todos os tipos de explosivos.",
+                img: "images/boosters.png",
+                specs: {
+                    "Pesos": "30g, 150g, 230g, 300g, 450g",
+                    "Diâmetros": "23,0 mm a 56,0 mm",
+                    "Velocidade de Detonação (VOD)": "Aprox. 7500 m/s",
+                    "Densidade": "Aprox. 1,6 g/cm³",
+                    "Classe ONU": "1.1 D (UN 0042)"
+                }
+            },
+            "explocord": {
+                name: "Explocord",
+                desc: "Cordel detonante convencional e reforçado da INPEX para uso em minerações, pedreiras e indústrias de prospecção sísmica. É um cordel flexível com um núcleo de material explosivo (PETN).",
+                img: "images/emulsao_bombeada.png",
+                specs: {
+                    "Gramaturas": "60, 40, 10, 5, 3 g/m",
+                    "Velocidade de Detonação (VOD)": "6800 m/s",
+                    "Resistência à Tração": "35 kg a 100 kg",
+                    "Diâmetros": "2,4 mm a 8,3 mm",
+                    "Classe ONU": "1.1 D (UN 0065)"
+                }
+            },
+            "exploprill": {
+                name: "Exploprill",
+                desc: "Explosivo INPEX do tipo ANFO, seguro e de fácil manejo, fabricado a partir da mistura de nitrato de amônia poroso e óleo mineral. Representa uma recomendável opção como carga de coluna para detonações em rochas duras sem a presença de água no interior dos furos.",
+                img: "images/anfo.png",
+                specs: {
+                    "Densidade": "0,73 g/cm³",
+                    "Velocidade de Detonação (VOD)": "3500 m/s",
+                    "Calor de Explosão": "4,9 MJ/Kg",
+                    "Volume de gases": "877 l/kg",
+                    "Classe ONU": "1.1 D (UN 0082)"
+                }
+            },
+            "explopim": {
+                name: "Explopim",
+                desc: "Associação da espoleta simples com o estopim, projetada pela INPEX para facilitar os trabalhos de detonação. Elimina os inconvenientes do corte imperfeito do estopim e do amolgamento inadequado da espoleta simples.",
+                img: "images/brinel.png",
+                specs: {
+                    "Diâmetro Interior": "6,6 mm",
+                    "Potência": "8",
+                    "Peso Líquido da Caixa": "1,4 kg",
+                    "Dimensões da Caixa": "250 x 105 x 105 mm",
+                    "Classe ONU": "1.1 B (UN 0029)"
+                }
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+        
+        const contentContainer = document.getElementById('product-content');
+
+        if (productId && productsData[productId]) {
+            const product = productsData[productId];
+            
+            let specsHTML = '';
+            for (const [key, value] of Object.entries(product.specs)) {
+                specsHTML += `
+                    <tr>
+                        <th>${key}</th>
+                        <td>${value}</td>
+                    </tr>
+                `;
+            }
+
+            contentContainer.innerHTML = `
+                <div class="product-image-container">
+                    <img src="${product.img}" alt="${product.name}" class="product-image">
+                </div>
+                <div class="product-info">
+                    <div class="badge" style="margin-bottom: 16px;">Especificações Técnicas</div>
+                    <h1>${product.name}</h1>
+                    <p class="desc">${product.desc}</p>
+                    
+                    <table class="specs-table">
+                        <tbody>
+                            ${specsHTML}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            document.title = product.name + " | Especificações INPEX";
+        } else {
+            contentContainer.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 64px 0;">
+                    <h2>Produto não encontrado.</h2>
+                    <p style="color: var(--text-muted); margin-top: 16px;">O produto que você está procurando não existe ou o link é inválido.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

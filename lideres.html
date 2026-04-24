@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Líderes de Frente | INPEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .leaders-section {
+            padding: 120px 0 100px;
+            min-height: 100vh;
+        }
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+        .leader-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .leader-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(33, 165, 102, 0.15);
+        }
+        .leader-img-wrapper {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 24px;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+        .leader-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .leader-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+        .leader-role {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .leader-role span {
+            background: rgba(33, 165, 102, 0.1);
+            padding: 4px 12px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .leader-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-back:hover {
+            color: var(--primary);
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;"><span class="logo-text">INPE<span class="logo-accent">X</span></span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="lideres.html" style="color: var(--text-main);">Líderes de Frente</a></li>
+                <li><a href="index.html#edicoes">Edições Anteriores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Leaders Section -->
+    <section class="leaders-section">
+        <div class="container">
+            <a href="index.html" class="btn-back"><i class="ph ph-arrow-left"></i> Voltar para a Home</a>
+            
+            <div class="page-header">
+                <div class="badge">Nossa Equipe</div>
+                <h1>Nossos <span class="text-gradient">Líderes de Frente</span></h1>
+                <p class="hero-subtitle">Conheça os especialistas que garantem a excelência e a segurança nas nossas operações em todo o Brasil.</p>
+            </div>
+
+            <div class="leaders-grid">
+                <!-- Card Ruidael -->
+                <article class="leader-card">
+                    <div class="leader-img-wrapper">
+                        <img src="images/ruidael.png" alt="Ruidael" class="leader-img">
+                    </div>
+                    <div class="leader-content">
+                        <h3>Ruidael</h3>
+                        <div class="leader-role">
+                            <span>Supervisor de Campo</span>
+                            <span>Cabo de Fogo Blaster</span>
+                            <span>Consultor de Mineração</span>
+                        </div>
+                        <p>Com vasta experiência no setor, Ruidael coordena as operações no terreno, garantindo que os mais rigorosos padrões de segurança e as melhores técnicas de desmonte sejam aplicados em cada projeto.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">INPE<span class="logo-accent">X</span></span>
+                </div>
+                <p>Líder em desmonte de rochas e engenharia de detonações no Brasil.</p>
+                <div class="socials">
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Equipamentos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 INPEX. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

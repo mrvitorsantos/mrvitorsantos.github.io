@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Detonações - Estudo de Caso | INPEX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .gallery-section {
+            padding: 120px 0 100px;
+            min-height: 100vh;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 48px;
+        }
+
+        .gallery-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(33, 165, 102, 0.15);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .img-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+        }
+
+        .gallery-content {
+            padding: 32px;
+        }
+
+        .gallery-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .gallery-content p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-back:hover {
+            color: var(--primary);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;"><span class="logo-text">INPE<span
+                            class="logo-accent">X</span></span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="lideres.html">Líderes de Frente</a></li>
+                <li><a href="index.html#edicoes">Edições Anteriores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <a href="index.html#edicoes" class="btn-back"><i class="ph ph-arrow-left"></i> Voltar para a Home</a>
+
+            <div class="page-header">
+                <div class="badge">Estudo de Caso</div>
+                <h1>Tipos de <span class="text-gradient">Detonações</span></h1>
+                <p class="hero-subtitle">Conheça as principais técnicas de desmonte de rochas utilizadas pela nossa
+                    equipe em operações complexas por todo o país.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="gallery-card">
+                    <div class="img-wrapper">
+                        <img src="images/bench_blasting.png" alt="Detonação em Bancada" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Detonação em Bancada</h3>
+                        <p>O método mais comum em minerações a céu aberto e grandes obras de infraestrutura. Permite o
+                            desmonte de grandes volumes de rocha com alta eficiência e fragmentação controlada.</p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="gallery-card">
+                    <div class="img-wrapper">
+                        <img src="images/controlled_blasting.png" alt="Desmonte Controlado" class="gallery-img">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Desmonte Controlado</h3>
+                        <p>Técnica avançada utilizada em áreas urbanas ou próximas a estruturas sensíveis. Minimiza
+                            vibrações, ruídos e o lançamento de fragmentos (flyrock), garantindo segurança total à
+                            população.</p>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">INPE<span class="logo-accent">X</span></span>
+                </div>
+                <p>Líder em desmonte de rochas e engenharia de detonações no Brasil.</p>
+                <div class="socials">
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Serviços</a>
+                    <a href="#">Equipamentos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 INPEX. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
